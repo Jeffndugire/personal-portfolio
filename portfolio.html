@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            padding-top: 60px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: cyan;
+        }
+        section {
+            padding: 100px 20px;
+            min-height: 100vh;
+        }
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .profile {
+            margin-top: 20px;
+        }
+        .profile-img {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: cyan;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: white;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="secret">
+        <h2>Unlock the Secret Section</h2>
+        <p>Hint: A year that changed everything for me.</p>
+        <input type="text" id="code-input" placeholder="Enter the code">
+        <button id="submit-code">Submit</button>
+        <p id="hint"></p>
+        <div id="hidden-section">
+            <h3>🎊 Congratulations!</h3>
+            <p>You've solved the riddle. Here's something special for you...</p>
+        </div>
+    </section>
+
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Creative Web Developer | Designer | Innovator</p>
+        <div class="profile">
+            <img src="https://mail.google.com/mail/u/0?ui=2&ik=fc165316b7&attid=0.1&permmsgid=msg-a:r-6089034678973079656&th=1957b644f65dfa69&view=att&disp=safe&realattid=1957b643c1cc49824d1&zw" alt="Jeff" class="profile-img">
+            <h2>Jeff</h2>
+            <p>I'm a passionate web developer with a strong background in front-end and back-end technologies.</p>
+            <p>My interests include JavaScript frameworks, UI/UX design, and AI-powered web solutions.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>My journey into software engineering started when I was young, fascinated by how things work. I remember once, as a teenager, my family’s old computer crashed, and instead of calling a technician, I spent days researching and troubleshooting until I managed to fix it myself. That was the moment I knew I loved problem-solving.</p>
+            <p>Fast forward to today, I specialize in building intuitive, scalable web applications. My goal is to craft solutions that make life easier and more efficient. Whether it’s a mood tracker app powered by JavaScript or an AI-powered matching system for a dating platform, I enjoy the challenge of transforming ideas into functional applications.</p>
+            <p>Some of my key skills include:</p>
+            <ul>
+                <li>Expertise in HTML, CSS, and JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            
+            <div class="project-card">
+                <h3>Restaurant Web App</h3>
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=fc165316b7&attid=0.1&permmsgid=msg-a:r3398843579932823947&th=19599c7bc357ebbe&view=fimg&fur=ip&permmsgid=msg-a:r3398843579932823947&sz=s0-l75-ft&attbid=ANGjdJ833mYxwm6BNqGXXusp3-N1z5AffQoXf4_oQ_h48nZhhwbVGgyq00JTSLdfo3LuDFDiOjnLLSMCukK0bLSYWKQYwbw1GskYK7nhM2A7rKt3MPbGopOMiWIFBLM&disp=emb&realattid=ii_m8a6om900&zw" width="300" alt="Restaurant Web App"> 
+                <p>A full-stack restaurant application that allows customers to browse menus, place orders, and book reservations.</p>
+                <button class="feature-spotlight" onclick="toggleDetails('project1')">Feature Spotlight</button>
+                <div id="project1" class="project-details">Built using React, Node.js, and MongoDB.</div>
+            </div>
+            
+            <div class="project-card">
+                <h3>Mood Tracker App</h3>
+                <img src="https://mail.google.com/mail/u/0?ui=2&ik=fc165316b7&attid=0.1&permmsgid=msg-a:r2836884900669309493&th=19599c9fbc5abdc8&view=fimg&fur=ip&permmsgid=msg-a:r2836884900669309493&sz=s0-l75-ft&attbid=ANGjdJ9xVXcsGYF0_oXePqgPrO4k0Ejo4cHPjrSMXPhxZi4YsQRx43J6lerqCMYCSq-J8_CdidzPkoaCJg55Xi9nRhKoM_4sfCFXMGFFUhrHj5I6NLA2EY2Ozfy3myE&disp=emb&realattid=ii_m8a6rtxt0&zw" width="300" alt="Mood Tracker App">
+                <p>An app that helps users track their moods based on scents, providing insights and patterns over time.</p>
+                <button class="feature-spotlight" onclick="toggleDetails('project2')">Feature Spotlight</button>
+                <div id="project2" class="project-details">Developed using JavaScript, Firebase, and Chart.js.</div>
+            </div>
+            
+            <div class="project-card">
+                <h3>AI-Powered Dating App</h3>
+                <img src="dating-app.png" alt="Dating App">
+                <p>An AI-driven dating platform that enhances matchmaking using video profiles and voice notes.</p>
+                <button class="feature-spotlight" onclick="toggleDetails('project3')">Feature Spotlight</button>
+                <div id="project3" class="project-details">Built with React Native, TensorFlow.js, and Firebase.</div>
+            </div>
+        
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-form">
+            <form action="your-server-endpoint" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/iam.kaduu" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/Jeffndugire" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+        <p>Designed and Developed by Jeff</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const secretSection = document.getElementById("hidden-section");
+        const submitCodeBtn = document.getElementById("submit-code");
+        const codeInput = document.getElementById("code-input");
+        const hintText = document.getElementById("hint");
+
+        secretSection.style.display = "none";
+
+        submitCodeBtn.addEventListener("click", () => {
+            const code = codeInput.value.trim();
+            if (code === "2007") { // Example secret code
+                secretSection.style.display = "block";
+                hintText.innerText = "🎉 You unlocked the secret!";
+            } else {
+                hintText.innerText = "❌ Incorrect code, try again!";
+            }
+        });
+    });
+
+    function toggleDetails(projectId) {
+        const projectDetails = document.getElementById(projectId);
+        if (projectDetails.style.display === "block") {
+            projectDetails.style.display = "none";
+        } else {
+            projectDetails.style.display = "block";
+        }
+    }
+    </script>
+
+</body>
+</html>
